@@ -7,7 +7,7 @@ import javax.persistence.*;
 @Data
 @Entity
 @Table(name = "online_test")
-public class onlineTest {
+public class tests {
 
     @Id
     @Column(name = "id")
@@ -16,10 +16,10 @@ public class onlineTest {
     @Column(name = "title")
     private String title;
 
-    public onlineTest(){
+    public tests(){
     }
 
-    public onlineTest(String title){
+    public tests(String title){
         this.title = title;
     }
 }

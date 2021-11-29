@@ -5,6 +5,7 @@ import com.example.onlinetestsservice.repository.answersRepository;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/answers")
@@ -18,5 +19,10 @@ public class answersController {
     @GetMapping("/all")
     public List<answers> readAnswers(){
         return answersRepository.findAll();
+    }
+
+    @GetMapping("/findById/{id}")
+    public Optional<answers> findAnswersById(@PathVariable int id) {
+        return answersRepository.findById(id);
     }
 }
