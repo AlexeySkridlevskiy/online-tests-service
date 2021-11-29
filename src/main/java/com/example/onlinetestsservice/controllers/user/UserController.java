@@ -1,4 +1,4 @@
-package com.example.onlinetestsservice.controllers;
+package com.example.onlinetestsservice.controllers.user;
 
 import com.example.onlinetestsservice.models.User;
 import com.example.onlinetestsservice.repository.UserRepository;
@@ -11,11 +11,11 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/user")
-public class SignController {
+public class UserController {
 
     private final UserRepository userRepository;
 
-    public SignController(UserRepository userRepository) {
+    public UserController(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
 
