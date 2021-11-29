@@ -7,7 +7,7 @@ import javax.persistence.*;
 @Data
 @Entity
 @Table(name = "questions")
-public class questions {
+public class Questions {
 
     @Id
     @Column(name = "id")
@@ -19,11 +19,10 @@ public class questions {
     @Column(name = "question")
     private String question;
 
-    public questions(){
+    public Questions(){
     }
 
-    public questions(Integer testId, String question){
-        this.testId = testId;
+    public Questions(String question){
         this.question = question;
     }
 }

@@ -7,7 +7,7 @@ import javax.persistence.*;
 @Data
 @Entity
 @Table(name = "answers")
-public class answers {
+public class Answers {
 
     @Id
     @Column(name = "id")
@@ -31,12 +31,11 @@ public class answers {
     @Column(name = "rightAnswer")
     private Integer right_answer;
 
-    public answers(){
+    public Answers(){
     }
 
-    public answers(Integer question_id, String first_answer, String second_answer,
+    public Answers(String first_answer, String second_answer,
                    String third_answer, String forth_answer, Integer right_answer){
-        this.question_id = question_id;
         this.first_answer = first_answer;
         this.second_answer = second_answer;
         this.third_answer = third_answer;
